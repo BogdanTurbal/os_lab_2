@@ -96,7 +96,7 @@ void PhilosopherLife(size_t index) {
 int main() {
     cout << "Dining Philosophers Problem\n";
 
-    thread t0([&] { PhilosopherLife(0); }); // [&] means every variable outside the lambda is captured by reference
+    thread t0([&] { PhilosopherLife(0); });
     thread t1([&] { PhilosopherLife(1); });
     thread t2([&] { PhilosopherLife(2); });
     thread t3([&] { PhilosopherLife(3); });
